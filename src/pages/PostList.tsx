@@ -31,8 +31,8 @@ export default function PostList(props:Props) {
           {list.map((post) => {
             return (
               <tr key={post.id} className="flex justify-center items-center flex-wrap w-1/3">
-                <td scope="col" className="bg-zinc-500 w-11/12 p-2">{post.postTitle}</td>
-                <td scope="col" className="bg-zinc-200 w-11/12 h-20 p-2">{post.postBody}</td>
+                <td scope="col" className="bg-zinc-500 w-11/12 p-2 overflow-hidden">{post.postTitle}</td>
+                <td scope="col" className="bg-zinc-200 w-11/12 h-20 p-2 overflow-hidden">{post.postBody}</td>
                 <td scope="col" className="bg-zinc-800 text-zinc-100 w-11/12 p-2">{post.currentMood}</td>
                 <td className="w-11/12 bg-slate-200">
                   <div className="flex justify-center">
