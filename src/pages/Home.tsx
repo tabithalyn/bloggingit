@@ -53,25 +53,27 @@ export default function Home() {
 
   return (
     <div className="mx-auto w-full">
-    <header className="w-full p-10 text-center bg-gray-500">
-      <h1>React: Simple CRUD Application</h1>
+    <header className="w-full p-10 text-center text-3xl bg-gray-200">
+      <h1>BLOG</h1>
     </header>
 
     <section>
       <div>
       {shownPage === Page.List && (
-        <div className="w-full p-10 bg-slate-500">
-        <input
-          type="button"
-          value="Add Post"
-          onClick={onAddPostClick}
-          className="p-5 bg-black text-white cursor-pointer hover:bg-neutral-700"
-        />
-        <PostList
-          list={postList}
-          onDeleteClick={deletePost}
-          onEdit={editPostData}
-        />
+        <div className="w-full py-10 px-5 bg-slate-300">
+          <div className="w-full flex justify-center flex-wrap">
+            <input
+              type="button"
+              value="Add Post"
+              onClick={onAddPostClick}
+              className="p-3 bg-black text-white cursor-pointer rounded-lg hover:bg-neutral-700"
+            />
+          </div>
+          <PostList
+            list={postList}
+            onEdit={editPostData}
+            onDelete={deletePost}
+          />
         </div>
       )}
       {shownPage === Page.Add && (

@@ -1,5 +1,5 @@
 export interface IPost {
-  id:string;
+  postId:number;
   postTitle:string;
   postBody:string;
   currentMood:string;
